@@ -2,8 +2,8 @@ import React, { PropTypes } from "react"
 import { Link } from "phenomic"
 import Svg from "react-svg-inline"
 
-import twitterSvg from "../icons/iconmonstr-twitter-1.svg"
-import gitHubSvg from "../icons/iconmonstr-github-1.svg"
+import twitterSvg from "../icons/011-twitter-logo-on-black-background.svg"
+import facebookSvg from "../icons/014-facebook-logo.svg"
 
 import styles from "./index.css"
 
@@ -22,7 +22,7 @@ const Header = (props, { metadata: { pkg } }) => (
         {
           pkg.twitter &&
           <a
-            href={ `https://twitter.com/${pkg.twitter}` }
+            href={ pkg.twitter }
             className={ styles.link }
           >
             <Svg svg={ twitterSvg } cleanup />
@@ -30,13 +30,13 @@ const Header = (props, { metadata: { pkg } }) => (
           </a>
         }
         {
-          pkg.repository &&
+          pkg.facebook &&
           <a
-            href={ pkg.repository }
+            href={ pkg.facebook }
             className={ styles.link }
           >
-            <Svg svg={ gitHubSvg } cleanup />
-            { "GitHub" }
+            <Svg svg={ facebookSvg } cleanup />
+            { "Facebook" }
           </a>
         }
       </div>

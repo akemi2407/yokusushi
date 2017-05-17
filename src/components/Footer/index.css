@@ -1,14 +1,15 @@
 .footer {
   text-align: center;
+  line-height: 1rem;
 }
 
 .phenomicReference {
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   opacity: 0.6;
   color: inherit;
   text-decoration: none;
 }
 
-.phenomicReferenceName {
-  font-weight: 100;
+a {
+  display: block;
 }
