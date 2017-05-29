@@ -1,9 +1,9 @@
 {
   "private": true,
   "name": "yokusushi",
-  "homepage": "http://abc.xyz",
-  "twitter": "http://www.twitter.com/yokusushi",
-  "facebook": "http://www.facebook.com/yokusushi",
+  "homepage": "http://yokusushi.co.uk",
+  "twitter": "http://www.twitter.com/yokusushi.uk",
+  "facebook": "http://www.facebook.com/yokusushi.uk",
   "scripts": {
     "lint:js": "eslint --ignore-path .gitignore --fix .",
     "lint:css": "stylelint \"src/**/*.css\"",
@@ -125,5 +125,8 @@
     "webpack": "^2.3.0",
     "whatwg-fetch": "^0.11.0",
     "phenomic": "^0.21.1"
+  },
+  "dependencies": {
+    "react-iframe": "^1.0.5"
   }
 }

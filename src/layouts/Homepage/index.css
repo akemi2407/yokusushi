@@ -1,0 +1,25 @@
+.pageContent {
+  text-align: center;
+	& svg {
+		fill: color(var(--colorText));
+		padding: 0 5px;
+		height: 0.9rem;
+		margin-bottom: -2px;
+	}
+}
+
+.opening {
+	font-size: 0.7rem;
+	line-height: 1.3rem;
+	width: 50%;
+	margin: 0 auto;
+	padding: 20px 0;
+
+	& > div:nth-child(even) {
+		background-color: color(var(--colorNeutral) l(- 20%));
+	}
+}
+
+.highlight {
+	color: color(var(--colorHighlight) l(+ 20%));
+}

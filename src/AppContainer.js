@@ -2,11 +2,12 @@ import React, { PropTypes } from "react"
 
 import "./index.global.css"
 
-import Container from "./components/Container"
-import DefaultHeadMeta from "./components/DefaultHeadMeta"
-import Header from "./components/Header"
-import Content from "./components/Content"
-import Footer from "./components/Footer"
+import Container from "./page-components/Container"
+import DefaultHeadMeta from "./page-components/DefaultHeadMeta"
+import Content from "./page-components/Content"
+import Footer from "./page-components/Footer"
+import Header from "./page-components/Header"
+
 
 const AppContainer = (props) => (
   <Container>
