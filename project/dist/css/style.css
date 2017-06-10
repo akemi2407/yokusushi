@@ -15,13 +15,16 @@ html, body {
   margin: 0;
   padding: 0; }
 
-a {
+a, button {
   color: inherit;
   opacity: 0.6;
   transition: 0.4s all; }
-  a:hover {
+  a:hover, button:hover {
     opacity: 1;
     cursor: pointer; }
+  a.active, button.active {
+    opacity: 1;
+    pointer-events: none; }
 
 svg {
   width: 1rem;
@@ -54,9 +57,9 @@ svg {
   flex-direction: column;
   -ms-flex-item-align: center;
   align-self: center;
-  width: 100%;
+  width: 90%;
   max-width: 60rem;
-  padding: 1rem 0.75rem; }
+  padding: 2rem 0.75rem; }
 
 .header {
   left: 0;
@@ -119,7 +122,6 @@ svg {
       color: #A70000;
       border-bottom: 1px solid #A70000; }
     .nav a.active {
-      opacity: 1;
       pointer-events: none;
       border-radius: 10px;
       cursor: default;
@@ -148,6 +150,8 @@ svg {
 
 .index {
   text-align: center; }
+  .index h2 {
+    margin-top: 0; }
   .index .icon-label {
     justify-content: center; }
   .index .opening-hours {
@@ -162,3 +166,67 @@ svg {
       color: #FF0000; }
   .index .address a {
     text-decoration: none; }
+
+.gallery {
+  text-align: center; }
+
+.contact {
+  background-color: #201C1C; }
+  .contact__details {
+    padding: 15px;
+    float: left;
+    width: 43%; }
+    .contact__details .icon-label {
+      padding: 10px 0; }
+    .contact__details__form input {
+      width: 100%;
+      margin: 5px 0; }
+    .contact__details__form textarea {
+      margin-top: 5px;
+      width: 100%;
+      height: 200px;
+      resize: none; }
+  .contact iframe {
+    float: right;
+    height: 450px;
+    width: 55%;
+    max-width: 600px; }
+
+.menu__nav {
+  text-align: center; }
+  .menu__nav button {
+    font-size: 1rem;
+    color: #EFEFEF;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 10px;
+    background-color: #2D2626;
+    border: solid 2px #EFEFEF; }
+    .menu__nav button:hover {
+      color: #A70000;
+      border-color: #A70000; }
+    .menu__nav button.active {
+      background-color: #A70000;
+      color: #FBFCFC;
+      border-color: #A70000; }
+
+.menu__category {
+  color: #FF0000;
+  font-size: 2rem;
+  border-bottom: solid 2px #FF0000;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 15px; }
+
+.menu__item {
+  padding: 0 20px;
+  line-height: 1.5rem;
+  padding-bottom: 10px; }
+  .menu__item__name {
+    border-bottom: solid 1px #a5a5a5; }
+  .menu__item__description {
+    font-style: italic;
+    color: #a5a5a5; }
+  .menu__item__price {
+    float: right;
+    margin-top: -1.5rem; }

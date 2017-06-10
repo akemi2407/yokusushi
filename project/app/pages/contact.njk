@@ -1,0 +1,28 @@
+{% extends "layout.njk" %}
+{% set activePage = 'contact' %}
+{% block pageTitle %} Yoku Sushi | Contact {% endblock %}
+
+{% block content %}
+	<div class="contact">
+		<div class="contact__details">
+			<div class="icon-label phone">
+				{% include "svg/003-telephone-1.svg" %}
+				{{ phoneNumber }}
+			</div>
+
+			<div class="icon-label email">
+				{% include "svg/010-gmail-logo.svg" %}
+				{{ email }}
+			</div>
+
+			Send us an email:
+			<form class="contact__details__form" action="mailto:{{ email }}" method="post" enctype="text/plain">
+				<input type="text" placeholder="Name" name="name" size="50"/></br>
+				<input type="text" placeholder="Contact Number" name="contact number" size="50"/></br>
+				<textarea placeholder="Enquiry" name="enquiry" size="50"></textarea></br>
+				<button type="submit" value="Send">Send</button>
+			</form>
+		</div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2523.4043594761083!2d0.28849775123354937!3d50.76807737941993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47df73f146b6015b%3A0xd3237527c142b4b5!2s42+Seaside+Rd%2C+Eastbourne+BN21!5e0!3m2!1sen!2suk!4v1497124426301" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+{% endblock %}

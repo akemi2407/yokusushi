@@ -1,0 +1,54 @@
+.menu {
+	&__nav {
+		text-align: center;
+		& button {
+			font-size: 1rem;
+			color: $text;
+			padding: 10px;
+			margin: 0 10px;
+			border-radius: 10px;
+			background-color: $primary;
+			border: solid 2px $text;
+
+			&:hover {
+				color: $highlight;
+				border-color: $highlight;
+			}
+
+			&.active {
+				background-color: $highlight;
+				color: $text-light;
+				border-color: $highlight;
+			}
+		}
+	}
+
+	&__category {
+		color: $bright;
+		font-size: 2rem;
+		border-bottom: solid 2px $bright;
+		padding: 5px;
+		margin-top: 20px;
+		margin-bottom: 15px;
+	}
+
+	&__item {
+		padding: 0 20px;
+		line-height: 1.5rem;
+		padding-bottom: 10px;
+
+		&__name {
+			border-bottom: solid 1px $text-dark;
+		}
+
+		&__description {
+			font-style: italic;
+			color: $text-dark;
+		}
+
+		&__price {
+			float: right;
+			margin-top: -1.5rem;
+		}
+	}
+}

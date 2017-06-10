@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+{% set activePage = 'gallery' %}
+{% block pageTitle %} Yoku Sushi | Gallery {% endblock %}
+
+{% set instagramUser = 'minno_dang' %}
+
+
+{% block content %}
+	<div class="gallery">
+		<p>
+			Here are the latest entries from our gallery. </br>
+			<a href="http://www.instagram.com/{{ instagramUser }}">Follow us on instagram to see more!</a>
+			Are you amongst our featured?
+		</p>
+
+		<div id="flickrembed">
+		</div>
+		<small style="display: block; text-align: center; margin: 0 auto;">
+			Powered by <a href="https://flickrembed.com">flickr embed</a>.
+		</small>
+
+		<script src="https://flickrembed.com/embed_v2.js.php?source=instagram&layout=responsive&input={{ instagramUser }}&sort=undefined&by=user&theme=tilesgrid&scale=fill&skin=alexis&id=593c49fee7565"></script>
+	</div>
+{% endblock %}

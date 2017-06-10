@@ -1,0 +1,35 @@
+{% set menu = [{
+	category: 'STARTERS',
+	items: [{
+		name: 'Salmon Sashimi',
+		price: '£4.50',
+		description: "Freshly cut salmon"
+	},{
+		name: 'Tuna Sashimi',
+		price: '£5.50',
+		description: "Freshly cut tuna"
+	}]
+},{
+	category: 'DRINKS',
+	items: [{
+		name: 'Calpis',
+		price: '£2.50',
+		description: "Yoghurt drink"
+	},{
+		name: 'Cola',
+		price: '£2.50',
+		description: ""
+	}]
+}] %}
+
+{% for category in menu %}
+	<div class='menu__category'>{{ category.category }}</div>	
+
+	{% for item in category.items %}
+		<div class='menu__item'>
+			<div class='menu__item__name'>{{ item.name }}</div>
+			<div class='menu__item__price'>{{ item.price }}</div>
+			<div class='menu__item__description'>{{ item.description }}</div>
+		</div>
+	{% endfor %}
+{% endfor %}
