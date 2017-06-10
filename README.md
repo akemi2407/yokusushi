@@ -1,19 +1,20 @@
-# [Phenomic](https://github.com/MoOx/phenomic) phenomic-theme-base
+# HOW TO USE
 
-## Install dependencies
+## Install packages
 
-```sh
-npm install
-```
+`npm install`
 
-## Run development server
+## Modify pages and templates
 
-```sh
-npm start
-```
+specific page content > project/app/pages
+templates and layouts > project/app/templates
+styles > project/app/scss
 
-## Build for production
+## Run gulp
 
-```sh
-npm run build
-```
+`cd project`
+`gulp`
+
+## Open HTML
+
+all compiled html files and css are provided under dist folder

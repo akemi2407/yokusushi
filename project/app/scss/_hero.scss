@@ -1,0 +1,26 @@
+.hero {
+	display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+	background: radial-gradient(
+		ellipse at 50% 50%,
+		rgb(65,55,55) 10%,
+		$primary 72%
+	);
+
+	& h1 {
+		color: $text-light;
+	    text-shadow: 0px 0px 5px $dark, 0px 0px 5px $dark, 5px 5px 10px $dark;
+	    font-size: 4rem;
+	    letter-spacing: -0.2rem;
+	}
+
+	& img {
+	    vertical-align: middle;
+	    margin-top: -15px;
+		height: 7rem;
+	}
+}

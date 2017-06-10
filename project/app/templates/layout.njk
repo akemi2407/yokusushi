@@ -1,0 +1,37 @@
+<!-- layout.nunjucks -->
+
+{% set twitterLink = 'http://www.twitter.com/yoku.sushi.uk' %}
+{% set facebookLink = 'https://www.facebook.com/yoku.sushi.uk' %}
+{% set phoneNumber = '020 xxx xxx xx' %}
+{% set email = 'blah@someemail.com' %}
+{% set address1 = '42-44 Seaside Road' %}
+{% set address2 = 'Eastbourne, East Sussex' %}
+{% set postcode = 'BN21 3PB' %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+  	{% block pagetitle %} Yoku Sushi {% endblock %}
+  </title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <div class="layout-container">
+  	{% include "header.njk" %}
+    {% include "hero.njk" %}
+    {% include "nav.njk" %}
+
+    <div class="content-container">
+      {% block content %} {% endblock %}
+    </div>
+    
+    {% include "footer.njk" %}    
+  </div>
+
+  <script src="./js/jquery-3.2.1.min.js"></script>
+</body>
+</html>

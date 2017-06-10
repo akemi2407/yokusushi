@@ -1,0 +1,27 @@
+.index {
+	text-align: center;
+
+	& .icon-label {
+		justify-content: center;
+	}
+
+	& .opening-hours {
+	    font-size: 0.7rem;
+	    line-height: 1.3rem;
+	    width: 50%;
+	    margin: 0 auto;
+	    padding: 20px 0;
+
+	    &__day:nth-child(even) {
+	    	background-color: $light;
+	    }
+
+	    &__day.closed {
+	    	color: $bright;
+	    }
+	}
+
+	& .address a {
+		text-decoration: none;
+	}
+}

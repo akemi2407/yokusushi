@@ -1,0 +1,37 @@
+.nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
+    line-height: 3rem;
+    font-family: sans-serif;
+
+    & a {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0 0.5rem;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        margin: 0 0.5rem;
+
+        &:hover {
+            color: $highlight;
+            border-bottom: 1px solid $highlight;
+        }
+
+        &.active {
+            opacity: 1;
+            pointer-events: none;
+            border-radius: 10px;
+            cursor: default;
+            background-color: $highlight;
+            color: $text-light;
+        }
+    }
+}

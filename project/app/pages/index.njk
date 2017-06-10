@@ -1,0 +1,45 @@
+<!-- index.njk -->
+{% extends "layout.njk" %}
+{% set activePage = 'index' %}
+
+
+{% block content %}
+	
+<div class="index">
+	<h2>Japanese Restaurant</h2>
+
+	<div class="icon-label phone">
+		{% include "svg/003-telephone-1.svg" %}
+		{{ phoneNumber }}
+	</div>
+
+	<div class="icon-label email">
+		{% include "svg/010-gmail-logo.svg" %}
+		{{ email }}
+	</div>
+
+	<div class="opening-hours">
+		<div class="opening-hours__day">Mon: 12:00-15:00, 17:00-22:30</div>
+		<div class="opening-hours__day closed">Tue: CLOSED</div>
+		<div class="opening-hours__day">Wed: 12:00-15:00, 17:00-22:30</div>
+		<div class="opening-hours__day">Thur: 12:00-15:00, 17:00-22:30</div>
+		<div class="opening-hours__day">Fri: 12:00-15:00, 17:00-23:00</div>
+		<div class="opening-hours__day">Sat: 12:00-15:00, 17:00-23:00</div>
+		<div class="opening-hours__day">Sun: 12:00-15:00, 17:00-22:30</div>
+	</div>
+
+	<div class="address">
+		<a target="_blank" 
+		   href="https://www.google.co.uk/maps/place/Seaside+Rd,+Eastbourne+BN21+3PB/@50.7683115,0.2885179,17z/data=!3m1!4b1!4m5!3m4!1s0x47df73f14752f869:0x4480bc4e1a494d0f!8m2!3d50.768318!4d0.2907261?hl=en">
+			<strong>
+				{% include "svg/005-location.svg" %}
+				{{ address1 }}
+			</strong><br/>
+			{{ address2 }}<br/>
+			<strong>{{ postcode }}</strong><br/>
+		</a>
+	</div>
+</div>
+
+
+{% endblock %}

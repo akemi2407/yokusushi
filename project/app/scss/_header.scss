@@ -1,0 +1,23 @@
+.header {
+    left: 0;
+    right: 0;
+    background-color: $dark;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    line-height: 2rem;
+
+    & a {
+	    padding: 0 0.5rem;
+	    text-decoration: none;
+	    border-bottom: 1px solid transparent;
+	    margin: 0 0.3rem;
+
+	    &:hover {
+	    	border-bottom: 1px solid $text;
+	    }
+    }
+}

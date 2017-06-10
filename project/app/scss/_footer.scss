@@ -1,0 +1,28 @@
+.footer {
+    line-height: 1rem;
+    background-color: $dark;
+    padding: 0.5rem 0;
+	font-size: 0.6rem;
+	opacity: 0.6;
+
+    & .left {
+    	padding: 0 10px;
+    	float: left;
+    }
+
+    & .right {
+		padding: 0 10px;
+    	float: right;
+    	text-align: right;
+
+    	& a {
+    		display: inline-block;
+    	}
+
+    	& svg {
+    		width: 2rem;
+    		height: 2rem;
+    		margin-right: 5px;
+    	}
+    }
+}
