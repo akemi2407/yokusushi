@@ -16,21 +16,20 @@
 		</div>
 
 		<div class='takeaway' style='display:none;'>
-			<p>We deliver within a 5-mile radius. Minimum £20 spend.</p>		
+			<p>We deliver within a 5-mile radius. Minimum £20 spend.</p>
 
 			{% include '_takeaway-menu.njk' %}
 		</div>
 	</div>
 
-
 	<script>
-		$('#dine-in')[0].addEventListener("click", function(){
+		$('#dine-in').click(function(){
 			$('.dine-in').show();
 			$('.takeaway').hide();
 			$('#dine-in').addClass('active');
 			$('#takeaway').removeClass('active');
 		});
-		$('#takeaway')[0].addEventListener("click", function(){
+		$('#takeaway').click(function(){
 			$('.dine-in').hide();
 			$('.takeaway').show();
 			$('#dine-in').removeClass('active');

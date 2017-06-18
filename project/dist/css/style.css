@@ -1,3 +1,15 @@
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 body {
   color: #EFEFEF;
   background: #2D2626;
@@ -223,10 +235,34 @@ svg {
   line-height: 1.5rem;
   padding-bottom: 10px; }
   .menu__item__name {
+    transition: 0.4s all;
     border-bottom: solid 1px #a5a5a5; }
+    .menu__item__name.hoverable:hover {
+      cursor: pointer;
+      color: #FFFFFF;
+      opacity: 1; }
   .menu__item__description {
     font-style: italic;
     color: #a5a5a5; }
   .menu__item__price {
     float: right;
     margin-top: -1.5rem; }
+  .menu__item__image {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 400px;
+    background-color: #201C1C;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s; }
+    .menu__item__image svg {
+      margin: 5px;
+      float: right;
+      width: 30px;
+      fill: #FBFCFC; }
+      .menu__item__image svg:hover {
+        cursor: pointer; }
+    .menu__item__image img {
+      width: 400px; }

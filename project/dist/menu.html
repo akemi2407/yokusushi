@@ -150,86 +150,242 @@
 			
 
 
-	<div class='menu__category'>STARTERS</div>	
+	<div class='menu__category'>STARTERS</div>
 
 	
 		<div class='menu__item'>
-			<div class='menu__item__name'>Salmon Sashimi</div>
+			<div class='menu__item__name hoverable'>Salmon Sashimi</div>
 			<div class='menu__item__price'>£4.50</div>
 			<div class='menu__item__description'>Freshly cut salmon</div>
+      
+        <div style='display:none' class="menu__item__image">
+          <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="357px" height="357px" viewBox="0 0 357 357" style="enable-background:new 0 0 357 357;" xml:space="preserve">
+<g>
+	<g id="close">
+		<polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 
+			214.2,178.5 		"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+          <img src="images/logo.png" />
+        </div>
+      
 		</div>
 	
 		<div class='menu__item'>
-			<div class='menu__item__name'>Tuna Sashimi</div>
+			<div class='menu__item__name '>Tuna Sashimi</div>
 			<div class='menu__item__price'>£5.50</div>
 			<div class='menu__item__description'>Freshly cut tuna</div>
+      
 		</div>
 	
 
-	<div class='menu__category'>DRINKS</div>	
+	<div class='menu__category'>DRINKS</div>
 
 	
 		<div class='menu__item'>
-			<div class='menu__item__name'>Calpis</div>
+			<div class='menu__item__name '>Calpis</div>
 			<div class='menu__item__price'>£2.50</div>
 			<div class='menu__item__description'>Yoghurt drink</div>
+      
 		</div>
 	
 		<div class='menu__item'>
-			<div class='menu__item__name'>Cola</div>
+			<div class='menu__item__name '>Cola</div>
 			<div class='menu__item__price'>£2.50</div>
 			<div class='menu__item__description'></div>
+      
 		</div>
 	
+
+
+<script>
+  $('.menu__item__name').click(function(e){
+    var image = $(e.target).siblings('.menu__item__image');
+    var imageHeight = image.height();
+    var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    image.css("top", $(document).scrollTop() + (viewPortHeight/2) - (imageHeight/2));
+    image.show();
+  });
+  $('.menu__item__image svg').click(function(e){
+    $(e.target).parents('.menu__item__image').hide();
+  });
+</script>
 
 
 		</div>
 
 		<div class='takeaway' style='display:none;'>
-			<p>We deliver within a 5-mile radius. Minimum £20 spend.</p>		
+			<p>We deliver within a 5-mile radius. Minimum £20 spend.</p>
 
 			
 
 
-	<div class='menu__category'>STARTERS</div>	
+	<div class='menu__category'>STARTERS</div>
 
 	
 		<div class='menu__item'>
-			<div class='menu__item__name'>Small Udon</div>
+			<div class='menu__item__name '>Small Udon</div>
 			<div class='menu__item__price'>£4.50</div>
 			<div class='menu__item__description'>Japanese Noodles</div>
+      
 		</div>
 	
 		<div class='menu__item'>
-			<div class='menu__item__name'>Whatever</div>
+			<div class='menu__item__name '>Whatever</div>
 			<div class='menu__item__price'>£5.50</div>
 			<div class='menu__item__description'>Can&#39;t think</div>
+      
+		</div>
+	
+		<div class='menu__item'>
+			<div class='menu__item__name '>Small Udon</div>
+			<div class='menu__item__price'>£4.50</div>
+			<div class='menu__item__description'>Japanese Noodles</div>
+      
+		</div>
+	
+		<div class='menu__item'>
+			<div class='menu__item__name hoverable'>Whatever</div>
+			<div class='menu__item__price'>£5.50</div>
+			<div class='menu__item__description'>Can&#39;t think</div>
+      
+        <div style='display:none' class="menu__item__image">
+          <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="357px" height="357px" viewBox="0 0 357 357" style="enable-background:new 0 0 357 357;" xml:space="preserve">
+<g>
+	<g id="close">
+		<polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 
+			214.2,178.5 		"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+          <img src="images/logo.png" />
+        </div>
+      
+		</div>
+	
+		<div class='menu__item'>
+			<div class='menu__item__name '>Small Udon</div>
+			<div class='menu__item__price'>£4.50</div>
+			<div class='menu__item__description'>Japanese Noodles</div>
+      
+		</div>
+	
+		<div class='menu__item'>
+			<div class='menu__item__name '>Whatever</div>
+			<div class='menu__item__price'>£5.50</div>
+			<div class='menu__item__description'>Can&#39;t think</div>
+      
 		</div>
 	
 
-	<div class='menu__category'>DRINKS</div>	
+	<div class='menu__category'>DRINKS</div>
 
 	
 		<div class='menu__item'>
-			<div class='menu__item__name'>Calpis</div>
+			<div class='menu__item__name '>Calpis</div>
 			<div class='menu__item__price'>£2.50</div>
 			<div class='menu__item__description'>Yoghurt drink</div>
+      
 		</div>
 	
+
+
+<script>
+  $('.menu__item__name').click(function(e){
+    var image = $(e.target).siblings('.menu__item__image');
+    var imageHeight = image.height();
+    var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    image.css("top", $(document).scrollTop() + (viewPortHeight/2) - (imageHeight/2));
+    image.show();
+  });
+  $('.menu__item__image svg').click(function(e){
+    $(e.target).parents('.menu__item__image').hide();
+  });
+</script>
 
 
 		</div>
 	</div>
 
-
 	<script>
-		$('#dine-in')[0].addEventListener("click", function(){
+		$('#dine-in').click(function(){
 			$('.dine-in').show();
 			$('.takeaway').hide();
 			$('#dine-in').addClass('active');
 			$('#takeaway').removeClass('active');
 		});
-		$('#takeaway')[0].addEventListener("click", function(){
+		$('#takeaway').click(function(){
 			$('.dine-in').hide();
 			$('.takeaway').show();
 			$('#dine-in').removeClass('active');

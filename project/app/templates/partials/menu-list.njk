@@ -1,0 +1,30 @@
+{% for category in menu %}
+	<div class='menu__category'>{{ category.category }}</div>
+
+	{% for item in category.items %}
+		<div class='menu__item'>
+			<div class='menu__item__name {% if item.image %}hoverable{% endif %}'>{{ item.name }}</div>
+			<div class='menu__item__price'>{{ item.price }}</div>
+			<div class='menu__item__description'>{{ item.description }}</div>
+      {% if item.image %}
+        <div style='display:none' class="menu__item__image">
+          {% include "svg/close-button.svg" %}
+          <img src="{{ item.image }}" />
+        </div>
+      {% endif %}
+		</div>
+	{% endfor %}
+{% endfor %}
+
+<script>
+  $('.menu__item__name').click(function(e){
+    var image = $(e.target).siblings('.menu__item__image');
+    var imageHeight = image.height();
+    var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    image.css("top", $(document).scrollTop() + (viewPortHeight/2) - (imageHeight/2));
+    image.show();
+  });
+  $('.menu__item__image svg').click(function(e){
+    $(e.target).parents('.menu__item__image').hide();
+  });
+</script>

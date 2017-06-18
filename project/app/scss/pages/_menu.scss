@@ -38,7 +38,14 @@
 		padding-bottom: 10px;
 
 		&__name {
+			transition: 0.4s all;
 			border-bottom: solid 1px $text-dark;
+
+			&.hoverable:hover {
+				cursor: pointer;
+				color: $text-white;
+				opacity: 1;
+			}
 		}
 
 		&__description {
@@ -49,6 +56,34 @@
 		&__price {
 			float: right;
 			margin-top: -1.5rem;
+		}
+
+		&__image {
+			position:absolute;
+			margin-left: auto;
+			margin-right: auto;
+			left: 0;
+			right: 0;
+
+			width: 400px;
+			background-color: $dark;
+			-webkit-animation: fadeIn 0.5s;
+			animation: fadeIn 0.5s;
+
+			& svg {
+				margin: 5px;
+				float: right;
+				width: 30px;
+				fill: $text-light;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+
+			& img {
+				width: 400px;
+			}
 		}
 	}
 }
