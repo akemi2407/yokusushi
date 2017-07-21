@@ -15,6 +15,18 @@
 				{{ email }}
 			</div>
 
+			<div class="social-media">
+				<a href={{twitterLink}} target="_blank">
+					{% include "svg/011-twitter-logo-on-black-background.svg" %}
+				</a>
+				<a href={{instaLink}} target="_blank">
+					{% include "svg/012-instagram-logo.svg" %}
+				</a>
+				<a href={{facebookLink}} target="_blank">
+					{% include "svg/014-facebook-logo.svg" %}
+				</a>
+			</div>
+			
 			Send us an email:
 			<form class="contact__details__form" action="mailto:{{ email }}" method="post" enctype="text/plain">
 				<input type="text" placeholder="Name" name="name" size="50"/></br>

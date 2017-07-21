@@ -1,5 +1,8 @@
 {% for category in menu %}
 	<div class='menu__category'>{{ category.category }}</div>
+  {% if category.description %}
+    <div class='menu__category-description'>{{ category.description }}</div>
+  {% endif %}
 
 	{% for item in category.items %}
 		<div class='menu__item'>

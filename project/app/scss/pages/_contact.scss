@@ -6,6 +6,14 @@
 		float: left;
 		width: 43%;
 
+		& .social-media a{
+			text-decoration: none;
+			& svg {
+				width: 2rem;
+				height: 2rem;
+			}
+		}
+
 		& .icon-label {
 			padding: 10px 0;
 		}
@@ -22,14 +30,16 @@
 				height: 200px;
 				resize: none;
 			}
+
+			button {
+				color: $dark;
+			}
 		}
 	}
 
-
-
 	& iframe {
 		float: right;
-		height: 450px;
+		height: 480px;
 		width: 55%;
 		max-width: 600px;
 	}

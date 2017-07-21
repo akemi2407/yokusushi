@@ -26,7 +26,6 @@
         }
 
         &.active {
-            pointer-events: none;
             border-radius: 10px;
             cursor: default;
             background-color: $highlight;

@@ -4,36 +4,36 @@
 
 {% block content %}
 	<div class='menu'>
+		<div class='menu__notice'>
+			<strong>Takeaway</strong> is available for all menu items with the exception of the <i>Dolsot Bibimbap</i>.
+		</div>
+
 		<div class='menu__nav'>
-			<button id='dine-in' class='active'>Dine-in Menu</button>
-			<button id='takeaway'>Takeaway Menu</button>
+			<button id='ala-carte' class='active'>À la carte</button>
+			<button id='lunch'>Special Lunch Bento</button>
 		</div>
 
-		<div class='dine-in'>
-			<p>Last orders half an hour before closing time.</p>
-
-			{% include '_dine-in-menu.njk' %}
+		<div class='ala-carte'>
+			{% include '_ala-carte-menu.njk' %}
 		</div>
 
-		<div class='takeaway' style='display:none;'>
-			<p>We deliver within a 5-mile radius. Minimum £20 spend.</p>
-
-			{% include '_takeaway-menu.njk' %}
+		<div class='lunch' style='display:none;'>
+			{% include '_lunch-menu.njk' %}
 		</div>
 	</div>
 
 	<script>
-		$('#dine-in').click(function(){
-			$('.dine-in').show();
-			$('.takeaway').hide();
-			$('#dine-in').addClass('active');
-			$('#takeaway').removeClass('active');
+		$('#ala-carte').click(function(){
+			$('.ala-carte').show();
+			$('.lunch').hide();
+			$('#ala-carte').addClass('active');
+			$('#lunch').removeClass('active');
 		});
-		$('#takeaway').click(function(){
-			$('.dine-in').hide();
-			$('.takeaway').show();
-			$('#dine-in').removeClass('active');
-			$('#takeaway').addClass('active');
+		$('#lunch').click(function(){
+			$('.ala-carte').hide();
+			$('.lunch').show();
+			$('#ala-carte').removeClass('active');
+			$('#lunch').addClass('active');
 		});
 	</script>
 {% endblock %}
