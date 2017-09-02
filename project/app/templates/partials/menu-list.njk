@@ -20,14 +20,30 @@
 {% endfor %}
 
 <script>
+  //hide any open photo and open clicked one
   $('.menu__item__name').click(function(e){
+    $('.menu__item__image').hide();
     var image = $(e.target).siblings('.menu__item__image');
     var imageHeight = image.height();
     var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     image.css("top", $(document).scrollTop() + (viewPortHeight/2) - (imageHeight/2));
     image.show();
+    e.stopPropagation();
   });
+
+  //close if click the close button
   $('.menu__item__image svg').click(function(e){
     $(e.target).parents('.menu__item__image').hide();
+    e.stopPropagation();
+  });
+  
+  //don't do anything (don't close) if click within photo
+  $('.menu__item__image').click(function (e) {
+    e.stopPropagation();
+  });
+
+  //close if click anywhere else
+  $(document).click(function (e) {
+    $('.menu__item__image').hide();
   });
 </script>
