@@ -1,22 +1,21 @@
-var nunjucksRender = require('gulp-nunjucks-render');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var gulp = require('gulp');
+const nunjucksRender  = require('gulp-nunjucks-render');
+const gsass = require('gulp-sass');
+const concat = require('gulp-concat');
+const { series, src, dest } = require('gulp');
 
-gulp.task('nunjucks', function() {
-	return gulp.src('app/pages/**/*.njk')
-		// Renders template with nunjucks
-		.pipe(nunjucksRender({
-	    	path: ['app/templates', 'app/templates/partials']
-       	}))
-        // output files in app folder
-	    .pipe(gulp.dest('dist'))
-});
+function nunjucks() {
+    return src('app/pages/**/*.njk')
+               .pipe(nunjucksRender({
+                   path: ['app/templates', 'app/templates/partials']
+               }))
+	       .pipe(dest('dist'))
+};
 
-gulp.task('sass', function() { 
-	return gulp.src("app/scss/main.scss") 
-		.pipe(sass({ errLogToConsole: true })) 
-		.pipe(concat('style.css'))
-		.pipe(gulp.dest("dist/css"))});
+function sass() { 
+    return src("app/scss/main.scss") 
+	       .pipe(gsass({ errLogToConsole: true })) 
+	       .pipe(concat('style.css'))
+	       .pipe(dest("dist/css"))
+};
 
-gulp.task('default', ['sass', 'nunjucks']);
+exports.default = series(sass, nunjucks);
